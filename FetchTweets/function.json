@@ -1,0 +1,19 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "timer",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "0 0 * * * *",
+      "runOnStartup": true
+    },
+    {
+      "type": "eventHub",
+      "direction": "out",
+      "name": "$return",
+      "connection": "TWEETS_EH_CONNECTION",
+      "eventHubName": "tweets_queue"
+    }
+  ]
+}
