@@ -1,0 +1,24 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "type": "eventHubTrigger",
+      "name": "events",
+      "direction": "in",
+      "eventHubName": "tweets_queue",
+      "connection": "TWEETS_EH_CONNECTION",
+      "cardinality": "many",
+      "consumerGroup": "$Default",
+      "dataType": "binary"
+    },
+    {
+      "type": "cosmosDB",
+      "direction": "out",
+      "name": "tweetdoc",
+      "databaseName": "tweetsdatabase",
+      "collectionName": "tweetscollection",
+      "createIfNotExists": true,
+      "connectionStringSetting": "tweetspycon_DOCUMENTDB"
+    }
+  ]
+}

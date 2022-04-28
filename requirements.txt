@@ -1,0 +1,11 @@
+# Do not include azure-functions-worker as it may conflict with the Azure Functions platform
+
+azure-functions
+tweepy
+azure-ai-textanalytics==5.1.0
+azure-cosmos
+pandas
+numpy
+matplotlib
+black
+ipympl
